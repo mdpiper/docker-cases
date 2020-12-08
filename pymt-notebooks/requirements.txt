@@ -1,0 +1,7 @@
+git
+pymt>=1.1
+pymt_ecsimplesnow
+pymt_gipl
+pandas
+seaborn
+notebook

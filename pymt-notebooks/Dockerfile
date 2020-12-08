@@ -1,8 +1,10 @@
 FROM condaforge/miniforge3
 
-RUN conda install notebook pymt git -c conda-forge
-
 WORKDIR /opt
+COPY requirements.txt .
+
+RUN conda install -c conda-forge --file=requirements.txt
+
 RUN git clone https://github.com/csdms/pymt
 WORKDIR /opt/pymt/notebooks
 
