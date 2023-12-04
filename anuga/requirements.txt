@@ -1,0 +1,16 @@
+python=3.8
+git
+pip
+nose
+numpy
+scipy
+matplotlib
+netcdf4
+gdal
+dill
+cython
+future
+openmp
+mpi4py
+gitpython
+cxx-compiler
