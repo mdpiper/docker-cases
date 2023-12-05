@@ -1,9 +1,8 @@
 # Build software for JOSS #6079.
 # 
 # Use:
-#   docker build --tag joss-6079 [--label setup-1] .
-#   docker run joss-6079
-#   docker run -it joss-6079 bash
+#   docker build --tag joss-6079 [--label setup-1] . 2>&1 | tee build.log
+#   docker run [-it] joss-6079
 
 FROM ubuntu:22.04
 
@@ -19,7 +18,6 @@ RUN git clone https://github.com/jakelangham/kestrel/
 WORKDIR /opt/kestrel
 
 RUN autoreconf -fi
-RUN ./configure
+RUN ./configure --prefix=/usr/local
 RUN make
-
-CMD [ "./src/kestrel" ]
+RUN make install
