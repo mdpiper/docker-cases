@@ -1,5 +1,5 @@
-# Build software for JOSS #6079.
-# 
+# Build the Kestrel software for JOSS #6079.
+#
 # Use:
 #   docker build --tag joss-6079 [--label setup-1] . 2>&1 | tee build.log
 #   docker run [-it] joss-6079
